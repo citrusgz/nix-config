@@ -30,6 +30,7 @@
       ufetch
       obs-studio
       cmatrix
+      onlyoffice-desktopeditors
     ];
   };
 
