@@ -31,7 +31,12 @@
       obs-studio
       cmatrix
       onlyoffice-desktopeditors
-    ];
+      anytype
+      gimp
+      fetch
+      bitwarden-desktop
+      speedtest-cli
+   ];
   };
 
   programs.firefox.enable = true;

@@ -3,9 +3,14 @@
 {
 
   boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
     grub = {
       enable = true;
-      devices = [ "/dev/vda" ];
+      devices = [ "nodev" ];
+      efiSupport = true;
       useOSProber = true;
     };
 

@@ -5,6 +5,10 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -20,6 +24,14 @@
 
       modules = [
         ./configuration.nix
+        inputs.spicetify-nix.nixosModules.spicetify
+        {
+         hardware.graphics = {
+            enable = true;
+            enable32Bit = true;
+          };
+          programs.steam.enable = true;
+        } 
       ];
     };
   };
