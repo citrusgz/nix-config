@@ -31,10 +31,6 @@
             enable32Bit = true;
           };
           programs.steam.enable = true;
-          programs.firefox.preferences = {
-            # disable libadwaita theming for Firefox
-            "widget.gtk.libadwaita-colors.enabled" = false;
-          };
         } 
       ];
     };

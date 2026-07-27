@@ -39,5 +39,11 @@
    ];
   };
 
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    autoConfig = ''
+      // desabilita tema libadwaita para seguir o estilo COSMIC
+      lockPref("widget.gtk.libadwaita-colors.enabled", false);
+    '';
+  };
 }
