@@ -13,5 +13,7 @@
     ./modules/home-manager.nix
   ];
 
+  environment.pathsToLink = [ "/share/bash-completion" ];
+
   system.stateVersion = "26.05";
 }

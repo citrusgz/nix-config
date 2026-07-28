@@ -11,7 +11,6 @@
   environment.systemPackages = with pkgs; [
     git
     psmisc
-    apple-cursor
     bluez
 
     hyfetch
@@ -25,7 +24,6 @@
     telegram-desktop
     btop
     htop
-    catppuccin-gtk
     papirus-icon-theme
     pfetch
     ufetch

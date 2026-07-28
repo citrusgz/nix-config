@@ -14,5 +14,4 @@
   security.polkit.enable = true;
 
   console.keyMap = "br-abnt2";
-
 }
