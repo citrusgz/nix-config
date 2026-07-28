@@ -9,7 +9,6 @@
     ./modules/audio.nix
     ./modules/users.nix
     ./modules/packages.nix
-    ./modules/home.nix
     ./modules/spicetify.nix
   ];
 

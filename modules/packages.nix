@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
 
@@ -36,6 +36,8 @@
     fetch
     bitwarden-desktop
     speedtest-cli
+  ] ++ [
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.firefox.enable = true;
