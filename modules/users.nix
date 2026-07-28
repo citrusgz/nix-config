@@ -9,41 +9,5 @@
       "wheel"
       "networkmanager"
     ];
-
-    packages = with pkgs; [
-      hyfetch
-      vim
-      vesktop
-      flameshot
-      fastfetch
-      tree
-      lolcat
-      vscode
-      steam
-      telegram-desktop
-      btop
-      htop
-      catppuccin-gtk
-      papirus-icon-theme
-      apple-cursor
-      pfetch
-      ufetch
-      obs-studio
-      cmatrix
-      onlyoffice-desktopeditors
-      anytype
-      gimp
-      fetch
-      bitwarden-desktop
-      speedtest-cli
-   ];
-  };
-
-  programs.firefox = {
-    enable = true;
-    autoConfig = ''
-      // desabilita tema libadwaita para seguir o estilo COSMIC
-      lockPref("widget.gtk.libadwaita-colors.enabled", false);
-    '';
   };
 }

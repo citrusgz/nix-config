@@ -13,16 +13,6 @@
 
   security.polkit.enable = true;
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-  };
-
-  programs.obs-studio = {
-    enable = true;
-    enableVirtualCamera = true;
-  };
-
   console.keyMap = "br-abnt2";
 
 }
