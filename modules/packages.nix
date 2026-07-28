@@ -26,7 +26,6 @@
     htop
     papirus-icon-theme
     pfetch
-    ufetch
     cmatrix
     onlyoffice-desktopeditors
     anytype
@@ -34,6 +33,8 @@
     fetch
     bitwarden-desktop
     speedtest-cli
+    nodejs
+    python3
   ] ++ [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
