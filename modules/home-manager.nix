@@ -13,6 +13,10 @@
       enable = true;
       userName = "citrusgz";
       userEmail = "29004858+citrusgz@users.noreply.github.com";
+      
+      extraConfig = {
+        credential.helper = "store";
+      };
     };
   };
 }

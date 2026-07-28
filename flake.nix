@@ -9,6 +9,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -25,6 +29,7 @@
       modules = [
         ./configuration.nix
         inputs.spicetify-nix.nixosModules.spicetify
+        inputs.home-manager.nixosModules.home-manager
         {
          hardware.graphics = {
             enable = true;

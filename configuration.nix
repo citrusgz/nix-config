@@ -10,6 +10,7 @@
     ./modules/users.nix
     ./modules/packages.nix
     ./modules/spicetify.nix
+    ./modules/home-manager.nix
   ];
 
   system.stateVersion = "26.05";
