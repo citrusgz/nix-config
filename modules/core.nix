@@ -14,7 +14,7 @@
       useOSProber = true;
     };
 
-    timeout = 3;
+    timeout = 5;
   };
 
   networking.hostName = "nixos";
