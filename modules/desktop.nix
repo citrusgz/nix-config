@@ -6,6 +6,9 @@
   services.displayManager.cosmic-greeter.enable = true;
   services.desktopManager.cosmic.enable = true;
 
+  services.printing.enable = true;
+  services.flatpak.enable = true;
+
   services.xserver.xkb = {
     layout = "br";
     variant = "";
