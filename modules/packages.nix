@@ -1,7 +1,6 @@
 { pkgs, inputs, ... }:
 
 {
-
   nixpkgs.config = {
     permittedInsecurePackages = [
       "electron-39.8.10"
@@ -18,10 +17,12 @@
     flameshot
     gimp
     hyfetch
+    nextcloud-client
     nodejs
     onlyoffice-desktopeditors
     psmisc
     python3
+    rclone
     speedtest-cli
     telegram-desktop
     tree
