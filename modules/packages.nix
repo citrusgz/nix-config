@@ -16,9 +16,11 @@
     fetch
     flameshot
     gimp
+    hping
     hyfetch
     nextcloud-client
     nodejs
+    nmap
     onlyoffice-desktopeditors
     psmisc
     python3
