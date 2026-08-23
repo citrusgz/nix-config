@@ -9,6 +9,7 @@
 
   environment.systemPackages = with pkgs; [
     anytype
+    appimage-run
     bitwarden-desktop
     bluez
     btop
@@ -38,6 +39,7 @@
   
   programs.firefox.enable = true;
   programs.htop.enable = true;
+  programs.nix-ld.enable = true;
   programs.obs-studio = {
     enable = true;
     enableVirtualCamera = true;

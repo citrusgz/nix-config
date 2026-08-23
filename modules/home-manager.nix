@@ -6,6 +6,12 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   home-manager.users.citrus = { config, pkgs, ... }: {
     home.stateVersion = "26.05";
 
