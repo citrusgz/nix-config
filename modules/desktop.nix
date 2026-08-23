@@ -3,8 +3,8 @@
 {
   services.xserver.enable = true;
 
-  services.displayManager.cosmic-greeter.enable = true;
-  services.desktopManager.cosmic.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.plasma-login-manager.enable = true;
   services.tailscale.enable = true;
   services.printing.enable = true;
   services.flatpak.enable = true;

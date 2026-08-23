@@ -12,12 +12,15 @@
     bitwarden-desktop
     bluez
     btop
+    cowsay
     fastfetch
     fetch
     flameshot
     gimp
     hping
     hyfetch
+    kdePackages.kcalc
+    lolcat
     nextcloud-client
     nodejs
     nmap
@@ -41,5 +44,11 @@
   };
   programs.steam.enable = true;
   programs.vim.enable = true;
-  programs.vscode.enable = true;
+  programs.vscode = {
+  enable = true;
+  package = pkgs.vscode;
+    extensions = [
+      inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace.bbenoist.nix
+    ];
+  };
 }
