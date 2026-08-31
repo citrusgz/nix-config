@@ -33,6 +33,7 @@
     telegram-desktop
     tree
     vesktop
+    vscode
   ] ++ [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
@@ -46,11 +47,4 @@
   };
   programs.steam.enable = true;
   programs.vim.enable = true;
-  programs.vscode = {
-  enable = true;
-  package = pkgs.vscode;
-    extensions = [
-      inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace.bbenoist.nix
-    ];
-  };
 }
