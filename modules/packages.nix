@@ -16,15 +16,17 @@
     cowsay
     fastfetch
     fetch
+    firefox
     flameshot
     gimp
     hping
+    htop
     hyfetch
     kdePackages.kcalc
     lolcat
-    nextcloud-client
     nodejs
     nmap
+    opencode
     onlyoffice-desktopeditors
     psmisc
     python3
@@ -38,8 +40,6 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   
-  programs.firefox.enable = true;
-  programs.htop.enable = true;
   programs.nix-ld.enable = true;
   programs.obs-studio = {
     enable = true;

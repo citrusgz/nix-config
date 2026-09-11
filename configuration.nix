@@ -6,6 +6,7 @@
 
     ./modules/core.nix
     ./modules/desktop.nix
+    ./modules/flatpak.nix
     ./modules/audio.nix
     ./modules/users.nix
     ./modules/packages.nix
