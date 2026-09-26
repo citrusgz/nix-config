@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     anytype
     appimage-run
+    aria2
     bitwarden-desktop
     bluez
     btop
@@ -30,11 +31,13 @@
     onlyoffice-desktopeditors
     psmisc
     python3
+    qbittorrent
     rclone
     speedtest-cli
     telegram-desktop
     tree
     vesktop
+    vlc
     vscode
   ] ++ [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
