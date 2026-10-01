@@ -15,6 +15,7 @@
     bluez
     btop
     cowsay
+    devenv
     fastfetch
     fetch
     firefox
@@ -25,10 +26,11 @@
     hyfetch
     kdePackages.kcalc
     lolcat
-    nodejs
+    ngrok
     nmap
-    opencode
+    nodejs
     onlyoffice-desktopeditors
+    opencode
     psmisc
     python3
     qbittorrent
@@ -42,7 +44,7 @@
   ] ++ [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
-  
+
   programs.nix-ld.enable = true;
   programs.obs-studio = {
     enable = true;
