@@ -40,7 +40,6 @@
     tree
     vesktop
     vlc
-    vscode
   ] ++ [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

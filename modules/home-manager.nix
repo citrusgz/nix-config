@@ -40,6 +40,15 @@
       blesh
       nix-bash-completions
     ];
+
+    programs.vscode = {
+      enable = true;
+      package = pkgs.vscode;
+      profiles.default.extensions = with pkgs.vscode-extensions; [
+        github.copilot
+        github.copilot-chat
+      ];
+    };
     services.nextcloud-client = {
       enable = true;
       startInBackground = true;
