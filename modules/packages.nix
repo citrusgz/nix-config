@@ -45,10 +45,6 @@
   ];
 
   programs.nix-ld.enable = true;
-  programs.obs-studio = {
-    enable = true;
-    enableVirtualCamera = true;
-  };
   programs.steam.enable = true;
   programs.vim.enable = true;
 }
