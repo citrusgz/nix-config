@@ -40,10 +40,6 @@
       blesh
       nix-bash-completions
     ];
-    programs.obs-studio = {
-      enable = true;
-      enableVirtualCamera = true;
-    };
     programs.vscode = {
       enable = true;
       package = pkgs.vscode;
