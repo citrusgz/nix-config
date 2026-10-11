@@ -3,6 +3,7 @@
 let
   flatpaks = [
     "com.protonvpn.www"
+    "com.stremio.Stremio"
   ];
 in {
   services.flatpak.enable = true;
