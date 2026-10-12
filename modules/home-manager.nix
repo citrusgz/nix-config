@@ -36,6 +36,7 @@
         garbage = "sudo nix-collect-garbage -d";
         update = "sudo nix flake update";
         rebuild = "sudo nixos-rebuild switch --flake ~/nix-config#nixos";
+        plasma-sync = "~/nix-config/scripts/plasma-sync";
       };
       historySize = 10000;
       initExtra = ''
