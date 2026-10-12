@@ -22,6 +22,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    # Plasma's things 
     wisteria-kde-theme = {
       url = "github:ryanmferreira/wisteria-kde-theme";
       flake = false;
