@@ -13,6 +13,11 @@
   };
 
   home-manager.users.citrus = { config, pkgs, ... }: {
+    imports = [
+      inputs.plasma-manager.homeModules.plasma-manager
+      ./plasma.nix
+    ];
+
     home.stateVersion = "26.05";
 
     programs.git = {
