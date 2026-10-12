@@ -17,25 +17,6 @@
       url = "github:areofyl/fetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-
-    # Plasma's things 
-    wisteria-kde-theme = {
-      url = "github:ryanmferreira/wisteria-kde-theme";
-      flake = false;
-    };
-    layan-kde = {
-      url = "github:vinceliuice/Layan-kde";
-      flake = false;
-    };
-    weather-widget-plus = {
-      url = "github:tully-t/weather-widget-plus";
-      flake = false;
-    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:

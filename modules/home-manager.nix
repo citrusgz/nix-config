@@ -5,7 +5,6 @@
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.extraSpecialArgs = { inherit inputs; };
 
   nix.gc = {
     automatic = true;
@@ -14,11 +13,6 @@
   };
 
   home-manager.users.citrus = { config, pkgs, ... }: {
-    imports = [
-      inputs.plasma-manager.homeModules.plasma-manager
-      ./plasma.nix
-    ];
-
     home.stateVersion = "26.05";
 
     programs.git = {
@@ -36,7 +30,6 @@
         garbage = "sudo nix-collect-garbage -d";
         update = "sudo nix flake update";
         rebuild = "sudo nixos-rebuild switch --flake ~/nix-config#nixos";
-        plasma-sync = "~/nix-config/scripts/plasma-sync";
       };
       historySize = 10000;
       initExtra = ''
