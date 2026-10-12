@@ -22,6 +22,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    wisteria-kde-theme = {
+      url = "github:ryanmferreira/wisteria-kde-theme";
+      flake = false;
+    };
+    layan-kde = {
+      url = "github:vinceliuice/Layan-kde";
+      flake = false;
+    };
+    weather-widget-plus = {
+      url = "github:tully-t/weather-widget-plus";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:

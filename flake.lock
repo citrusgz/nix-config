@@ -40,6 +40,22 @@
         "type": "github"
       }
     },
+    "layan-kde": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764251772,
+        "narHash": "sha256-gy3sHVoCo4q7ihFuLvQEil7t4GdrbcfatOulAy2MZ9U=",
+        "owner": "vinceliuice",
+        "repo": "Layan-kde",
+        "rev": "a0b6a4956022276aee33309b2e07d1d0ef3db30c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vinceliuice",
+        "repo": "Layan-kde",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1791594108,
@@ -83,9 +99,12 @@
       "inputs": {
         "fetch": "fetch",
         "home-manager": "home-manager",
+        "layan-kde": "layan-kde",
         "nixpkgs": "nixpkgs",
         "plasma-manager": "plasma-manager",
         "spicetify-nix": "spicetify-nix",
+        "weather-widget-plus": "weather-widget-plus",
+        "wisteria-kde-theme": "wisteria-kde-theme",
         "zen-browser": "zen-browser"
       }
     },
@@ -122,6 +141,38 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "weather-widget-plus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776048440,
+        "narHash": "sha256-2KHhoi2N9pe3+cWh304vR632Q8i6oh2jwfuBOtcmyNU=",
+        "owner": "tully-t",
+        "repo": "weather-widget-plus",
+        "rev": "bef88089d5485b09fbb7408ff581da9b1287c966",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tully-t",
+        "repo": "weather-widget-plus",
+        "type": "github"
+      }
+    },
+    "wisteria-kde-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784653817,
+        "narHash": "sha256-8GeuhpwMClf4G7BebpnD9JacU8mh/QFkQEyrzjJV4MI=",
+        "owner": "ryanmferreira",
+        "repo": "wisteria-kde-theme",
+        "rev": "86db5d92a0285ecef376cb22afd6efc2af1d3d93",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryanmferreira",
+        "repo": "wisteria-kde-theme",
         "type": "github"
       }
     },

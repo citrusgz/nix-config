@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 let
-  assets = import ../pkgs/plasma-assets.nix { inherit pkgs; };
+  assets = import ../pkgs/plasma-assets.nix {
+    inherit pkgs;
+    inherit (inputs) wisteria-kde-theme layan-kde weather-widget-plus;
+  };
 in
 
 {
