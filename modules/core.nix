@@ -2,22 +2,6 @@
 
 {
 
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
-    grub = {
-      enable = true;
-      devices = [ "nodev" ];
-      efiSupport = true;
-      useOSProber = true;
-    };
-
-    timeout = 5;
-  };
-
-  networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Sao_Paulo";

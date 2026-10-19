@@ -1,5 +1,16 @@
 { pkgs, inputs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  zenPackages = inputs.zen-browser.packages.${system};
+  zen-browser-unwrapped = zenPackages.zen-browser-unwrapped.override {
+    hash = "sha256-uyBF0+IWVNQP6EElAJLurf0sH8gx7vtQkiJ3PIvcoUk=";
+  };
+  zenBrowser = zenPackages.zen-browser.override {
+    inherit zen-browser-unwrapped;
+  };
+in
+
 {
   nixpkgs.config = {
     permittedInsecurePackages = [
@@ -40,8 +51,8 @@
     vesktop
     vlc
   ] ++ [
-    inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.fetch.packages.${system}.default
+    zenBrowser
   ];
 
   programs.nix-ld.enable = true;

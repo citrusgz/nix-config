@@ -31,15 +31,9 @@
       };
 
       modules = [
-        ./configuration.nix
+        ./hosts/nixos
         inputs.spicetify-nix.nixosModules.spicetify
         inputs.home-manager.nixosModules.home-manager
-        {
-         hardware.graphics = {
-            enable = true;
-            enable32Bit = true;
-          };
-        } 
       ];
     };
   };
