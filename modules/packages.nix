@@ -2,13 +2,6 @@
 
 let
   system = pkgs.stdenv.hostPlatform.system;
-  zenPackages = inputs.zen-browser.packages.${system};
-  zen-browser-unwrapped = zenPackages.zen-browser-unwrapped.override {
-    hash = "sha256-uyBF0+IWVNQP6EElAJLurf0sH8gx7vtQkiJ3PIvcoUk=";
-  };
-  zenBrowser = zenPackages.zen-browser.override {
-    inherit zen-browser-unwrapped;
-  };
 in
 
 {
@@ -52,7 +45,7 @@ in
     vlc
   ] ++ [
     inputs.fetch.packages.${system}.default
-    zenBrowser
+    inputs.zen-browser.packages.${system}.default
   ];
 
   programs.nix-ld.enable = true;

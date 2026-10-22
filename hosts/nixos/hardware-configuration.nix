@@ -10,7 +10,11 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest.extend (final: prev: {
+    v4l2loopback = prev.v4l2loopback.overrideAttrs (old: {
+      DEPMOD = "true";
+    });
+  });
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 

@@ -22,12 +22,29 @@ in {
       set -u
 
       flatpak="${pkgs.flatpak}/bin/flatpak"
+      sleep="${pkgs.coreutils}/bin/sleep"
       state="/var/lib/flatpak/.nix-flatpak-managed"
       desired="${lib.concatStringsSep " " flatpaks}"
+      repo="https://flathub.org/repo/flathub.flatpakrepo"
 
       mkdir -p "$(dirname "$state")"
 
-      "$flatpak" remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+      attempt=1
+      max_attempts=12
+      while [ "$attempt" -le "$max_attempts" ]; do
+        if "$flatpak" remote-add --if-not-exists --system flathub "$repo"; then
+          attempt=0
+          break
+        fi
+        echo "flatpak: flathub indisponível (tentativa $attempt de $max_attempts), aguardando a rede"
+        attempt=$((attempt + 1))
+        "$sleep" 10
+      done
+
+      if [ "$attempt" -ne 0 ]; then
+        echo "flatpak: sem acesso ao flathub, os aplicativos declarados não foram reconciliados"
+        exit 0
+      fi
 
       for app in $desired; do
         if ! "$flatpak" info --system "$app" >/dev/null 2>&1; then
