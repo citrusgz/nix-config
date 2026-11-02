@@ -22,7 +22,6 @@ in
     devenv
     fastfetch
     firefox
-    flameshot
     gimp
     hping
     htop
@@ -32,7 +31,10 @@ in
     ngrok
     nmap
     nodejs
-    onlyoffice-desktopeditors
+    # OnlyOffice still lists gtk2 as a build input upstream, but its output
+    # only links against gtk3. Substitute gtk3 so we don't pull in the
+    # now-broken gtk2 package (see NixOS/nixpkgs#410814).
+    (onlyoffice-desktopeditors.override { gtk2 = gtk3; })
     opencode
     psmisc
     python3
