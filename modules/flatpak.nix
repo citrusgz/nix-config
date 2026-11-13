@@ -4,6 +4,7 @@ let
   flatpaks = [
     "com.protonvpn.www"
     "com.stremio.Stremio"
+    "app.fluxer.Fluxer"
   ];
 in {
   services.flatpak.enable = true;
