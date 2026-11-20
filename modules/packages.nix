@@ -31,6 +31,7 @@ in
     bitwarden-desktop
     bluez
     btop
+    burpsuite
     cowsay
     devenv
     fastfetch

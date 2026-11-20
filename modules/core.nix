@@ -4,6 +4,9 @@
 
   networking.networkmanager.enable = true;
 
+  # Open ports
+  networking.firewall.allowedTCPPorts = [ 1735 22 ];
+
   time.timeZone = "America/Sao_Paulo";
 
   i18n.defaultLocale = "pt_BR.UTF-8";
