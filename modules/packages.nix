@@ -34,7 +34,6 @@ in
     burpsuite
     cowsay
     devenv
-    fastfetch
     firefox
     gimp
     hping
@@ -47,6 +46,7 @@ in
     nodejs
     onlyoffice-desktopeditors
     opencode
+    pfetch
     psmisc
     python3
     qbittorrent
