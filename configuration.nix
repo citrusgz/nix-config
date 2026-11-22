@@ -4,6 +4,7 @@
   imports = [
     ./modules/core.nix
     ./modules/desktop.nix
+    ./modules/power.nix
     ./modules/flatpak.nix
     ./modules/audio.nix
     ./modules/users.nix
