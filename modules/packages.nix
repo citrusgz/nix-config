@@ -10,7 +10,6 @@ in
     appimage-run
     aria2
     bitwarden-desktop
-    bluez
     btop
     burpsuite
     cowsay

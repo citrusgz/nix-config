@@ -33,7 +33,6 @@
       modules = [
         ./hosts/nixos
         inputs.spicetify-nix.nixosModules.spicetify
-        inputs.home-manager.nixosModules.home-manager
       ];
     };
   };

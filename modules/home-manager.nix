@@ -25,13 +25,11 @@
     };
     programs.bash = {
       enable = true;
-      enableCompletion = true;
       shellAliases = {
         garbage = "sudo nix-collect-garbage -d";
         update = "sudo nix flake update";
         rebuild = "sudo nixos-rebuild switch --flake ~/nix-config#nixos && flatpak upgrade --assumeyes";
       };
-      historySize = 10000;
       initExtra = ''
         source ${pkgs.blesh}/share/blesh/ble.sh
       '';

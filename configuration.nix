@@ -12,8 +12,6 @@
     ./modules/home-manager.nix
   ];
 
-  environment.pathsToLink = [ "/share/bash-completion" ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
