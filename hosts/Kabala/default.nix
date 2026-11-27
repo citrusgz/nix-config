@@ -6,7 +6,7 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "nixos";
+  networking.hostName = "Kabala";
 
   boot.loader = {
     efi = {

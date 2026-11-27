@@ -10,10 +10,12 @@ in
     appimage-run
     aria2
     bitwarden-desktop
+    brave
     btop
     burpsuite
     cowsay
     devenv
+    fastfetch
     firefox
     gimp
     hping

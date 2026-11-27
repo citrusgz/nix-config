@@ -27,7 +27,7 @@
       };
 
       modules = [
-        ./hosts/nixos
+        ./hosts/Kabala
         inputs.spicetify-nix.nixosModules.spicetify
       ];
     };
